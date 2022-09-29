@@ -54,6 +54,7 @@ body {
     grid-gap: 20px;
   }
   &-item {
+    cursor: pointer;
     height: 200px;
     margin: 5px;
     padding-bottom: 50px;
@@ -91,6 +92,20 @@ body {
   }
 }
 
+.hide {
+  animation: fade 1s ease forwards;
+  z-index: 1;
+}
+
+.popup {
+  visibility: hidden;
+}
+
+.result {
+  font-size: 50px;
+  text-align: center;
+}
+
 footer {
   top: 100%;
   position: sticky;
@@ -103,5 +118,22 @@ footer {
     &:hover {
       color: rgb(64, 64, 64);
     }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    width: 120%;
+  }
+
+  50% {
+    width: 220%;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    width: 70%;
   }
 }
