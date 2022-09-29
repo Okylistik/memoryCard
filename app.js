@@ -37,8 +37,6 @@ const startGame = () => {
   cards.forEach((card) => cardsOnBoard(card));
 };
 
-startGame();
-
 ulList.addEventListener("click", onClick);
 
 function reset() {
@@ -114,3 +112,4 @@ function emptyFlow() {
     return banner.classList.remove("popup");
   }
 }
+startGame();
